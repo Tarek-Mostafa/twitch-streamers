@@ -12,9 +12,7 @@ for (var i = 0; i < channels.length; i++) {
           
             /*----- Check if user is online or offline*/
             function check_user (data, i) {
-                console.log(data);
                 if(data.stream) {
-                    console.log(channels[i] + ' is online\n');
                     $('.all, .online').append(
                         "<div class='channel user-online'>"+
                         "<div class='image'><img class='img-responsive' src="+data.stream.channel.logo+" /></div>"+
@@ -25,13 +23,11 @@ for (var i = 0; i < channels.length; i++) {
                 } 
 
                 else {
-                    console.log(channels[i] +' is off-line\n');
                     $.ajax({
                         url: 'https://wind-bow.hyperdev.space/twitch-api/channels/'+channels[i],
                         dataType: 'jsonp',
                         cache: false,
                         success: function(data){
-                            console.log(data);
                             $('.all, .offline').append(
                                 "<div class='channel user-offline'>"+
                                 "<div class='image'><img class='img-responsive' src="+data.logo+" /></div>"+
