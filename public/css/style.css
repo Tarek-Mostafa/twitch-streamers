@@ -1,0 +1,70 @@
+body {
+	padding-top: 15px;
+    background-color: #ecf0e7;
+}
+
+p {
+	margin: 0;
+}
+
+.channel.user-online {
+    background-color: #b8cca6;
+    color: #5c5457;
+}
+
+.channel.user-offline {
+    background-color: #4a5e82;
+    color: #eee;
+}
+
+.user-offline .name a{
+    color: #b8cca6;
+}
+
+.user-online .name a{
+    color: #4a5e82;
+}
+
+.nav-tabs, .channel {
+	margin-bottom: 7px;
+}
+
+.channel {
+    overflow: hidden;
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+  	display: -ms-flexbox;  /* TWEENER - IE 10 */
+  	display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+ 	display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+    -webkit-align-items: center;
+   	align-items: center;
+    padding: 20px;
+}
+
+.channel > div {
+    float: left;
+    width: 33.33%;
+}
+
+.channel .image img{
+	width: 60px;
+	height: 60px;
+}
+
+.channel .image img {
+	border: 5px solid #eee;
+	border-radius: 50%;
+}
+
+@media screen and (max-width: 560px) {
+	.status span {
+		display: none;
+	}
+
+	.status {
+		text-align: right;
+	}
+
+	.name {
+		text-align: center;
+	}
+}
