@@ -39,6 +39,13 @@ for (var i = 0; i < channels.length; i++) {
                     })
                 }
             }
+        },
+        error: function(){
+            if($('.all').html() != '') {
+                    $('.all').html('');
+                } else {
+                    $('.all').append('<h3>Sorry The Twitch API is having issues right now</h3>');
+            }
         }
     }); 
 }
