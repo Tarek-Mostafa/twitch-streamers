@@ -2,7 +2,7 @@ var channels = ["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "storbeck"
 
 for (var i = 0; i < channels.length; i++) {
     $.ajax({
-        url: "https://wind-bow.hyperdev.space/twitch-api/streams/"+channels[i],
+        url: "https://wind-bow.glitch.me/twitch-api/streams/"+channels[i],
         dataType: "jsonp",
         cache: false,
         indexValue: i,
@@ -24,7 +24,7 @@ for (var i = 0; i < channels.length; i++) {
 
                 else {
                     $.ajax({
-                        url: 'https://wind-bow.hyperdev.space/twitch-api/channels/'+channels[i],
+                        url: 'https://wind-bow.glitch.me/twitch-api/channels/'+channels[i],
                         dataType: 'jsonp',
                         cache: false,
                         success: function(data){
